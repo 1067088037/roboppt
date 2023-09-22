@@ -52,6 +52,16 @@
           </v-btn>
         </v-col>
       </v-row>
+
+      <div class="py-12"/>
+
+      <v-row class="d-flex align-center justify-center">
+        <v-col cols="auto">
+          <div class="text-h6 text-red">
+            tips: 申请加入QQ群请将申报书通过U盘或者移动硬盘寄送至大赛组委会秘书处。
+          </div>
+        </v-col>
+      </v-row>
     </v-responsive>
   </v-container>
 </template>
