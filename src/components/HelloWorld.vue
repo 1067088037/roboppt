@@ -50,6 +50,33 @@
             加入讨论
           </v-btn>
         </v-col>
+
+        <v-col cols="auto">
+          <v-menu>
+            <template v-slot:activator="{ props }">
+              <v-btn
+                v-bind="props"
+                color="success"
+                min-width="228"
+                size="x-large"
+                target="_blank"
+                variant="flat"
+              >
+                <v-icon icon="mdi-cancel" size="large"/>
+                不能水的比赛
+              </v-btn>
+            </template>
+            <v-list>
+              <v-list-item
+                v-for="(item, index) in competition_items"
+                :key="index"
+                :value="index"
+                @click="openUrl(item.url)">
+                <v-list-item-title>{{ item.title }}</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+        </v-col>
       </v-row>
 
       <div class="py-12"/>
@@ -74,7 +101,12 @@ export default defineComponent({
       ppt_items: [
         {title: "Microsoft 365", url: "https://www.microsoft.com/zh-cn/microsoft-365/powerpoint"},
         {title: "WPS Office", url: "https://www.wps.cn/"},
-      ]
+      ],
+      competition_items: [
+        {title: "RoboMaster", url: "https://www.robomaster.com/"},
+        {title: "ROBOCON", url: "http://cnrobocon.net/"},
+        {title: "ROBOTAC", url: "http://robotac.cn/"},
+      ],
     }
   },
   methods: {
