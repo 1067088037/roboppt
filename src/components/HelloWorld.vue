@@ -11,17 +11,30 @@
 
       <v-row class="d-flex align-center justify-center">
         <v-col cols="auto">
-          <v-btn
-            color="warning"
-            href="https://www.microsoft.com/zh-cn/microsoft-365/powerpoint"
-            min-width="228"
-            size="x-large"
-            target="_blank"
-            variant="flat"
-          >
-            <v-icon icon="mdi-file-powerpoint" size="large"/>
-            机器人设计软件
-          </v-btn>
+          <v-menu>
+            <template v-slot:activator="{ props }">
+              <v-btn
+                v-bind="props"
+                color="warning"
+                min-width="228"
+                size="x-large"
+                target="_blank"
+                variant="flat"
+              >
+                <v-icon icon="mdi-file-powerpoint" size="large"/>
+                机器人设计软件
+              </v-btn>
+            </template>
+            <v-list>
+              <v-list-item
+                v-for="(item, index) in ppt_items"
+                :key="index"
+                :value="index"
+                @click="openUrl(item.url)">
+                <v-list-item-title>{{ item.title }}</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
         </v-col>
 
         <v-col cols="auto">
@@ -52,6 +65,26 @@
   </v-container>
 </template>
 
-<script lang="ts" setup>
-//
+<script lang="ts">
+import {defineComponent} from 'vue'
+
+export default defineComponent({
+  props: {
+    name: String,
+    msg: {type: String, required: true}
+  },
+  data() {
+    return {
+      ppt_items: [
+        {title: "Microsoft 365", url: "https://www.microsoft.com/zh-cn/microsoft-365/powerpoint"},
+        {title: "WPS Office", url: "https://www.wps.cn/"},
+      ]
+    }
+  },
+  methods: {
+    openUrl(url: string) {
+      window.open(url);
+    }
+  }
+})
 </script>
