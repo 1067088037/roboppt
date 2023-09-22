@@ -17,7 +17,7 @@
             min-width="228"
             size="x-large"
             target="_blank"
-            variant="outlined"
+            variant="flat"
           >
             <v-icon icon="mdi-file-powerpoint" size="large"/>
             机器人设计软件
@@ -35,20 +35,6 @@
           >
             <v-icon icon="mdi-forum" size="large"/>
             加入讨论
-          </v-btn>
-        </v-col>
-
-        <v-col cols="auto">
-          <v-btn
-            color="primary"
-            href="http://wx.youngcommunist.com/#/microtabs/microstationdetail?activityid=HD-2309160037"
-            min-width="228"
-            size="x-large"
-            target="_blank"
-            variant="outlined"
-          >
-            <v-icon icon="mdi-bulletin-board" size="large"/>
-            大赛通知
           </v-btn>
         </v-col>
       </v-row>
