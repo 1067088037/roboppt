@@ -1,68 +1,54 @@
 <template>
   <v-container class="fill-height">
     <v-responsive class="align-center text-center fill-height">
-      <v-img height="300" src="@/assets/logo.svg" />
+      <v-img height="120" src="@/assets/logo.svg"/>
 
-      <div class="text-body-2 font-weight-light mb-n1">Welcome to</div>
+      <h1 class="text-h2 font-weight-bold mt-5">RoboPPT</h1>
 
-      <h1 class="text-h2 font-weight-bold">Vuetify</h1>
+      <div class="text-h5 mt-2">汇聚全球优秀 PowerPoint 工程师</div>
 
-      <div class="py-14" />
+      <div class="py-12"/>
 
       <v-row class="d-flex align-center justify-center">
         <v-col cols="auto">
           <v-btn
-            href="https://vuetifyjs.com/components/all/"
-            min-width="164"
-            rel="noopener noreferrer"
+            color="warning"
+            href="https://www.microsoft.com/zh-cn/microsoft-365/powerpoint"
+            min-width="228"
+            size="x-large"
             target="_blank"
-            variant="text"
+            variant="outlined"
           >
-            <v-icon
-              icon="mdi-view-dashboard"
-              size="large"
-              start
-            />
-
-            Components
+            <v-icon icon="mdi-file-powerpoint" size="large"/>
+            机器人设计软件
           </v-btn>
         </v-col>
 
         <v-col cols="auto">
           <v-btn
             color="primary"
-            href="https://vuetifyjs.com/introduction/why-vuetify/#feature-guides"
+            href="https://www.zhihu.com/question/623044430"
             min-width="228"
-            rel="noopener noreferrer"
             size="x-large"
             target="_blank"
             variant="flat"
           >
-            <v-icon
-              icon="mdi-speedometer"
-              size="large"
-              start
-            />
-
-            Get Started
+            <v-icon icon="mdi-forum" size="large"/>
+            加入讨论
           </v-btn>
         </v-col>
 
         <v-col cols="auto">
           <v-btn
-            href="https://community.vuetifyjs.com/"
-            min-width="164"
-            rel="noopener noreferrer"
+            color="primary"
+            href="http://wx.youngcommunist.com/#/microtabs/microstationdetail?activityid=HD-2309160037"
+            min-width="228"
+            size="x-large"
             target="_blank"
-            variant="text"
+            variant="outlined"
           >
-            <v-icon
-              icon="mdi-account-group"
-              size="large"
-              start
-            />
-
-            Community
+            <v-icon icon="mdi-bulletin-board" size="large"/>
+            大赛通知
           </v-btn>
         </v-col>
       </v-row>
@@ -71,5 +57,5 @@
 </template>
 
 <script lang="ts" setup>
-  //
+//
 </script>
