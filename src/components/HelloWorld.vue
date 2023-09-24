@@ -7,22 +7,36 @@
 
       <div class="text-h5 mt-2">汇聚全球优秀 PowerPoint 工程师</div>
 
-      <div class="py-12"/>
+      <div class="py-8"/>
 
       <v-row class="d-flex align-center justify-center">
+        <v-col cols="auto">
+          <v-btn
+            color="error"
+            href="https://www.pptrobot.com/"
+            min-width="200"
+            size="x-large"
+            target="_blank"
+            variant="flat"
+          >
+            <v-icon icon="mdi-web" size="large"/>
+            友站链接
+          </v-btn>
+        </v-col>
+
         <v-col cols="auto">
           <v-menu>
             <template v-slot:activator="{ props }">
               <v-btn
                 v-bind="props"
                 color="warning"
-                min-width="228"
+                min-width="200"
                 size="x-large"
                 target="_blank"
                 variant="flat"
               >
                 <v-icon icon="mdi-file-powerpoint" size="large"/>
-                机器人设计软件
+                设计机器人
               </v-btn>
             </template>
             <v-list>
@@ -41,7 +55,7 @@
           <v-btn
             color="primary"
             href="https://www.zhihu.com/question/623044430"
-            min-width="228"
+            min-width="200"
             size="x-large"
             target="_blank"
             variant="flat"
@@ -57,7 +71,7 @@
               <v-btn
                 v-bind="props"
                 color="success"
-                min-width="228"
+                min-width="200"
                 size="x-large"
                 target="_blank"
                 variant="flat"
